@@ -1,235 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrews Weld Fab</title>
-    <style>
-      @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .services {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service {
-    width: 90%;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    text-align: center;
-    padding: 0 1rem;
-  }
-
-  .cta h2 {
-    font-size: 1.5rem;
-  }
-
-  .cta p,
-  .cta-button {
-    padding: 0.5rem 1rem;
-  }
-
-  form input,
-  form textarea {
-    width: 90% !important;
-  }
-
-  footer p {
-    font-size: 0.9rem;
-  }
-}
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #9fabc4;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrews Weld Fab</title>
+  <style>
+    .hide {
+      display: none;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 280px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    #showMoreBtn {
+      background-color: #ff6600;
+      color: white;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    #showMoreBtn:hover {
+      background-color: #e65c00;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 90%;
       }
-      header {
-        background-color: #333;
-        color: #fff;
-        padding: 1rem 0;
-        text-align: center;
-      }
+    }
+    @media (max-width: 768px) {
       nav {
-        background-color: #444;
-        display: flex;
-        justify-content: center;
-      }
-      nav a {
-        color: #fff;
-        padding: 1rem;
-        text-decoration: none;
-      }
-      nav a:hover {
-        background-color: #555;
-      }
-      .hero {
-        position: relative;
-        background-image: url("Andrewpagemainimage.jpeg");
-        background-size: cover;
-        background-position: center;
-        height: 300px;
-        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-shadow: 2px 2px 4px #000;
       }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 1;
-      }
-
-      .hero h1 {
-        z-index: 2;
-      }
-
-      .content {
-        padding: 2rem;
-        max-width: 1200px;
-        margin: auto;
-      }
-      .cta {
-        background-color: #222;
-        color: #fff;
-        text-align: center;
-        padding: 2rem;
-      }
-      .cta h2 {
-        margin-bottom: 0.5rem;
-      }
-      .cta-button {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 0.75rem 1.5rem;
-        background-color: #ff6600;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 4px;
-      }
-      .cta-button:hover {
-        background-color: #e65c00;
-      }
-
       .services {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
       }
       .service {
-        background-color: #fff;
-        padding: 1rem;
-        flex: 1 1 300px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 90%;
       }
-      footer {
-        background-color: #333;
-        color: #fff;
+      .hero h1 {
+        font-size: 2rem;
         text-align: center;
-        padding: 1rem 0;
-        margin-top: 2rem;
+        padding: 0 1rem;
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Andrews Weld Fab</h1>
-      <p>Precision Metal Fabrication & Machining</p>
-    </header>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="hero">
-      <h1>Quality You Can Trust</h1>
-    </div>
-    <div class="cta">
-      <h2>Need Expert Welding & Fabrication?</h2>
-      <p>Contact us today for a custom quote and fast turnaround.</p>
-      <a href="#contact" class="cta-button">Get a Quote</a>
-    </div>
-
-    <div class="content">
-      <section class="services">
-        <div class="service">
-          <h2>Machining</h2>
-          <p>High-precision with great welds .</p>
-        </div>
-        <div class="service">
-          <h2>Metal Fabrication</h2>
-          <p>Custom metal structures built to your specifications.</p>
-        </div>
-        <div class="service">
-          <h2>Press Repair</h2>
-          <p>Expert repair services to minimize downtime.</p>
-        </div>
-      </section>
-    </div>
-
-    <footer>
-      <p>&copy; 2025 Andrews Weld Fab. All rights reserved.</p>
-    </footer>
-    <section
-      id="contact"
-      style="padding: 2rem; background-color: #eee; text-align: center"
-    >
-      <h2>Contact Us</h2>
-      <p>Call us at (931) 209-2427 or email us at info@andrewsfab.com</p>
-    <form
-  action="https://formsubmit.co/noemicouch@gmail.com"
-  method="POST"
-  style="margin-top: 1rem;"
->
-<input type="hidden" name="_next" value="thank-you.html">
-
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    style="padding: 0.5rem; width: 200px"
-    required
-  /><br /><br />
-
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    style="padding: 0.5rem; width: 200px"
-    required
-  /><br /><br />
-
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    rows="4"
-    style="padding: 0.5rem; width: 300px"
-    required
-  ></textarea><br /><br />
-
-  <button type="submit" style="padding: 0.5rem 1rem">Send</button>
-</form>
-
-<div id="formMessage" style="margin-top: 1rem; color: green;">
-  <!-- You can optionally show a custom message here with JavaScript if you want -->
+      .cta h2 {
+        font-size: 1.5rem;
+      }
+      .cta p,
+      .cta-button {
+        padding: 0.5rem 1rem;
+      }
+      form input,
+      form textarea {
+        width: 90% !important;
+      }
+      footer p {
+        font-size: 0.9rem;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #9fabc4;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    .hero {
+      position: relative;
+      background-image: url("Andrewpagemainimage.jpeg");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero h1 {
+      z-index: 2;
+    }
+    .content {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .cta {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    .cta h2 {
+      margin-bottom: 0.5rem;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #ff6600;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .cta-button:hover {
+      background-color: #e65c00;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-around;
+    }
+    .service {
+      background-color: #fff;
+      padding: 1rem;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 4px solid #ff6600;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Andrews Weld Fab</h1>
+    <p>Precision Metal Fabrication & Machining</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hero">
+    <h1>Quality You Can Trust</h1>
+  </div>
+  <div class="cta">
+    <h2>Need Expert Welding & Fabrication?</h2>
+    <p>Contact us today for a custom quote and fast turnaround.</p>
+    <a href="#contact" class="cta-button">Get a Quote</a>
+  </div>
+  <div class="content">
+    <section class="services" id="services">
+      <div class="service" id="flatBedsBtn" style="cursor: pointer;">
+  <h2>Flat Beds</h2>
+  <p>High-precision with great welds.</p>
+  <img src="Images/basic-flat.jpg" alt="Flatbed preview" style="width: 100%; border-radius: 6px;" />
 </div>
-      <div id="formMessage" style="margin-top: 1rem; color: green;"></div>
-      <script src="javascript.js"></script>
+      <div class="service">
+        <h2>Metal Fabrication</h2>
+        <p>Custom metal structures built to your specifications.</p>
+      </div>
+      <div class="service">
+        <h2>Press Repair</h2>
+        <p>Expert repair services to minimize downtime.</p>
+      </div>
     </section>
-  </body>
+    <!-- Flatbed Gallery (Hidden by Default) -->
+<div id="flatbedGallerySection" class="hide" style="padding: 2rem; background-color: #fff;">
+  <h2 style="text-align: center;">Flatbed Gallery</h2>
+  <div class="gallery">
+    <img src="Images/basic-flat.jpg" alt="Basic Flat Bed" />
+    <!-- other hidden images -->
+    <img class="hide" src="Images/fullyloaded-dd.jpg" alt="Flat bed with boxes, fenders and side-rails dd" />
+      <img class="hide" src="Images/3toolbox.jpg" alt="Flatbed with 2 front boxes and 1 rear bed box" />
+        <img class="hide" src="Images/4toolbox.jpg" alt="Flatbed with 4 tool boxes" />
+        <img class="hide" src="Images/4tootlbox-2frontbig.jpg" alt="Utility bed with 4 toolboxes" />
+        <img class="hide" src="Images/8toolbox.jpg" alt="Utility bed with 8 tool boxes" />
+        <img class="hide" src="Images/9box.jpg" alt="Utility bed with 9 toolboxes" />
+        <img class="hide" src="Images/12toolbox-piperack.jpg" alt="12 tool box utility bed with piperack" />
+        <img class="hide" src="Images/fenders.jpg" alt="Flatbed with fenders" />
+        <img class="hide" src="Images/side-rails.jpg" alt="Flat bed with side-rails" />
+        <img class="hide" src="Images/fullyloaded-dd.jpg" alt="Fully loaded flatbed design" />
+  </div>
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <button id="showMoreBtn">Show More</button>
+  </div>
+</div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Andrews Weld Fab. All rights reserved.</p>
+  </footer>
+  <section id="contact" style="padding: 2rem; background-color: #eee; text-align: center;">
+    <h2>Contact Us</h2>
+    <p>Call us at (931) 209-2427 or email us at info@andrewsfab.com</p>
+    <div style="max-width: 500px; margin: 2rem auto; background: #fff; padding: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 8px;">
+      <form action="https://formsubmit.co/noemicouch@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="thank-you.html">
+        <input type="text" name="name" placeholder="Your Name" style="padding: 0.75rem; width: 100%; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #ccc;" required />
+        <input type="email" name="email" placeholder="Your Email" style="padding: 0.75rem; width: 100%; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #ccc;" required />
+        <textarea name="message" placeholder="Your Message" rows="4" style="padding: 0.75rem; width: 100%; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #ccc;" required></textarea>
+        <button type="submit" style="background-color: #ff6600; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer;">Send</button>
+      </form>
+    </div>
+    <div id="formMessage" style="margin-top: 1rem; color: green;"></div>
+  </section>
+</body>
+  <script src="javascript.js"></script>
 </html>
