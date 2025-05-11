@@ -1,0 +1,180 @@
+.hide {
+  display: none;
+}
+.gallery-item {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 280px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 7px 36px -3px rgba(0, 0, 0, 0.2);
+}
+.gallery-item div {
+  background-color: white;
+  padding: 10px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.gallery img {
+  width: 280px;
+  height: auto;
+  /* box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;*/
+}
+.gallery-item :hover {
+  /*transform: scale(1.05);*/
+}
+#showMoreBtn {
+  background-color: #ff6600;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#showMoreBtn:hover {
+  background-color: #e65c00;
+  transform: scale(1.02);
+}
+@media (max-width: 600px) {
+  .gallery img {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service {
+    width: 90%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+  .cta p,
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
+  form input,
+  form textarea {
+    width: 90% !important;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #9fabc4;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+nav {
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  color: #fff;
+  padding: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #555;
+}
+.hero {
+  position: relative;
+  background-image: url("Andrewpagemainimage.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.hero h1 {
+  z-index: 2;
+}
+.content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.cta {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+.cta h2 {
+  margin-bottom: 0.5rem;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.cta-button:hover {
+  background-color: #e65c00;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.service {
+  background-color: #fff;
+  padding: 1rem;
+  flex: 1 1 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 4px solid #ff6600;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
