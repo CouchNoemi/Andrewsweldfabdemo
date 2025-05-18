@@ -56,9 +56,7 @@
           <div class="gallery-item">
             <img src="Images/basic-flat.jpg" alt="Basic Flat Bed" />
             <div>
-              <p>
-              This is the most basic desing you can get
-              </p>
+              <p>This is the most basic desing you can get</p>
             </div>
           </div>
           <div class="gallery-item">
@@ -67,7 +65,7 @@
               alt="Flat bed with boxes, fenders and side-rails dd"
             />
             <div>
-              <p>2 toolboxes </p>
+              <p>2 toolboxes</p>
             </div>
           </div>
           <div class="gallery-item">
@@ -82,9 +80,7 @@
           <div class="gallery-item">
             <img src="Images/4toolbox.jpg" alt="Flatbed with 4 tool boxes" />
             <div>
-              <p>
-               Flatbed with 4 tool boxes
-              </p>
+              <p>Flatbed with 4 tool boxes</p>
             </div>
           </div>
           <div class="gallery-item">
@@ -93,9 +89,7 @@
               alt="Utility bed with 4 toolboxes"
             />
             <div>
-              <p>
-               Utility bed with 4 toolboxes
-              </p>
+              <p>Utility bed with 4 toolboxes</p>
             </div>
           </div>
           <div class="gallery-item">
@@ -104,17 +98,13 @@
               alt="Utility bed with 8 tool boxes"
             />
             <div>
-              <p>
-               Utility bed with 8 tool boxes
-              </p>
+              <p>Utility bed with 8 tool boxes</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="Images/9box.jpg" alt="Utility bed with 9 toolboxes" />
             <div>
-              <p>
-                Utility bed with 9 toolboxes
-              </p>
+              <p>Utility bed with 9 toolboxes</p>
             </div>
           </div>
           <div class="gallery-item">
@@ -123,25 +113,19 @@
               alt="12 tool box utility bed with piperack"
             />
             <div>
-              <p>
-                12 tool box utility bed with piperack
-              </p>
+              <p>12 tool box utility bed with piperack</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="Images/fenders.jpg" alt="Flatbed with fenders" />
             <div>
-              <p>
-                Flatbed with fenders
-              </p>
+              <p>Flatbed with fenders</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="Images/side-rails.jpg" alt="Flat bed with side-rails" />
             <div>
-              <p>
-                Flat bed with side-rails
-              </p>
+              <p>Flat bed with side-rails</p>
             </div>
           </div>
           <div class="gallery-item">
@@ -150,15 +134,15 @@
               alt="Flat bed with boxes, fenders and side-rails dd"
             />
             <div>
-              <p>
-               Flat bed with boxes, fenders and side-rails dd
-              </p>
+              <p>Flat bed with boxes, fenders and side-rails dd</p>
             </div>
           </div>
         </div>
+        <!-- 
         <div style="text-align: center; margin-top: 1.5rem">
           <button id="showMoreBtn">Show More</button>
         </div>
+        -->
       </div>
     </div>
     <footer>
@@ -170,59 +154,29 @@
     >
       <h2>Contact Us</h2>
       <p>Call us at (931) 209-2427 or email us at info@andrewsfab.com</p>
-      <div
-        style="
-          max-width: 500px;
-          margin: 2rem auto;
-          background: #fff;
-          padding: 2rem;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          border-radius: 8px;
-        "
-      >
-        <form action="https://formsubmit.co/noemicouch@gmail.com" method="POST">
+      <div class="contactContainer">
+        <!--
+        action="https://formsubmit.co/noemicouch@gmail.com"
+         method="POST"
+        -->
+        <div>
           <input type="hidden" name="_next" value="thank-you.html" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
           <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            style="
-              padding: 0.75rem;
-              width: 100%;
-              margin-bottom: 1rem;
-              border-radius: 5px;
-              border: 1px solid #ccc;
-            "
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            style="
-              padding: 0.75rem;
-              width: 100%;
-              margin-bottom: 1rem;
-              border-radius: 5px;
-              border: 1px solid #ccc;
-            "
+            type="tel"
+            name="tel"
+            placeholder="Your Phone Number"
             required
           />
           <textarea
             name="message"
             placeholder="Your Message"
             rows="4"
-            style="
-              padding: 0.75rem;
-              width: 100%;
-              margin-bottom: 1rem;
-              border-radius: 5px;
-              border: 1px solid #ccc;
-            "
             required
           ></textarea>
           <button
-            type="submit"
+            id="submitBtn"
             style="
               background-color: #ff6600;
               color: white;

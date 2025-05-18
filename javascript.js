@@ -2,18 +2,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // Form submission logic
   const form = document.getElementById("contactForm");
   const messageBox = document.getElementById("formMessage");
+  const submitBtn = document.getElementById("submitBtn");
+
+  if (submitBtn) {
+    submitBtn.addEventListener("click", () => {
+      const name = document.querySelector("input[name='name']").value.trim();
+      const email = document.querySelector("input[name='email']").value.trim();
+      const tel = document.querySelector("input[name='tel']").value.trim();
+
+      const message = document.querySelector("textarea").value.trim();
+      console.log(name, email, tel, message);
+
+      const body = `
+        Name: ${name}
+        Email: ${email}
+        Tel: ${tel}
+        Message: ${message}
+      `;
+      window.location.href = `mailto:noemicouch@gmail.com,obendesmond2@gmail.com,?subject=Customer&body=${body}`;
+    });
+  }
 
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const name = document
-        .querySelector("input[placeholder='Your Name']")
-        .value.trim();
-      const email = document
-        .querySelector("input[placeholder='Your Email']")
-        .value.trim();
+      const name = document.querySelector("input[name='name']").value.trim();
+      const email = document.querySelector("input[name='email']").value.trim();
+      const tel = document.querySelector("input[name='tel']").value.trim();
+
       const message = document.querySelector("textarea").value.trim();
+
+      console.log(name, tel, email);
 
       if (!name || !email || !message) {
         messageBox.style.color = "red";
